@@ -1,0 +1,506 @@
+*{
+	box-sizing: border-box; /*para que elementos no crezcan cuando damos espacios internos*/
+}
+
+body
+{
+	font-family: "Roboto"; /*agrega nombre tipografia*/
+	font-size: 13px;/*tamaño a todos los elementos dentro del body*/
+	color: black;
+}
+
+a
+{
+	display: inline-block; /*cambia comportamiento elementos poniendolos uno al lado del otro*/
+	text-decoration: none;
+}
+
+p
+{
+	color:black;
+}
+
+header
+{
+	/*background-color: aquamarine;*/
+	padding: 15px 0; /*espacio hacia adentro del elemento*/
+	position: fixed;/*posicion fija donde te persiga el menu se debe poner los demas items de abajo*/
+	top: 0; /*para menu siempre arriba*/
+	left: 0; /*para que este pegado a la izquierda*/
+	z-index: 2;/*para que quede encima de toda la seccion se le pone 2 por que trae 1 por defecto*/
+	background-color: sandybrown;
+	width: 100%;/*por que no ocupa espacio a la derecha y no hace caso al contenido por eso se pone 100%*/
+
+}
+
+header .container
+{
+	display: flex;/*aprovecha y acomoda los espacios del elemento*/
+	justify-content: space-between; /*alinea en base eje x */
+	align-items: center; /*alinea en base eje y */
+}
+
+header .container .logo
+{
+	width: 100px; /*propiedad de 100 pixeles*/
+}
+
+header .container nav a /*el espacio indica que container esta dentro de header y que a esta dentro de nav que esta dentro de container*/
+{
+	color: red;
+	text-decoration: none; /*le quita las lineas a las etiquetas a*/
+	margin: 0 15px 0 15px; /*espacio hacia afuera del elemento con espacio de 15 pixeles a los lados*/
+}
+
+header .container .hamb
+{
+	display: none;
+	position: relative;
+}
+
+footer.seccion /*aqui quitar el .seccion y tambien quitar la clase seccion del footer en el html*/
+{
+	background-color: black;
+	color: white;
+	padding-bottom: 0;/*tambien se podia poniendo padding-top: 60px;*/
+}
+
+footer .barra-footer
+{
+	background-color: grey;
+	text-align: center;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-top: 20px;
+	padding-bottom: 20px;	
+}
+footer .logo-footer/*repitio footer .logo-footer por poner el footer p*/
+{
+	width: 100%;	
+}
+footer p
+{
+	color: white;
+	margin-bottom: 30px;	
+}
+footer a
+{
+	color: white;
+		
+}
+footer .redes
+{
+	font-size: 30px;
+	display: flex;
+	/*justify-content: space-between;*/
+	/*background-color: 0;*/
+	/*color: darkred;*/
+}
+footer .redes a
+{
+	margin: 0 7.5px;
+}
+footer ul
+{
+	padding-left: 0;
+	list-style: none;
+	margin: 0;	
+}
+footer ul li
+{
+	margin-bottom: 10px;
+	
+
+}
+.boton
+{
+	text-align: center;
+	text-decoration: none;
+	padding: 15px 20px;
+	border: none;
+}
+.boton.boton-rojo/*ojo sin espacio por que boton-rojo no esta dentro de la clase boton, son 2 elementos que quiero darles las mismas caracteristicas*/
+{	
+	background-color: red;/*color al fondo del boton*/
+	color: orange;/*color al texto del boton*/
+	font-size: 20px;
+	font-weight: bold;/*profundidad de fuente(negrilla)*/
+}
+
+.boton.boton-blanco/*ojo sin espacio por que boton-blanco no esta dentro de la clase boton, son 2 elementos que quiero darles las mismas caracteristicas*/
+{	
+	background-color: white;/*color al fondo del boton*/
+	color: #3673e7;/*color al texto del boton*/
+	font-size: 16px;
+	font-weight: bold;/*profundidad de fuente(negrilla)*/
+	border: 1px solid red;
+}
+.boton.boton-negro/*ojo sin espacio por que boton-negro no esta dentro de la clase boton, son 2 elementos que quiero darles las mismas caracteristicas*/
+{	
+	background-color: black;/*color al fondo del boton*/
+	color: white;/*color al texto del boton*/
+	font-size: 20px;
+	font-weight: bold;/*profundidad de fuente(negrilla)*/
+}
+
+
+.boton.boton-negro:hover
+{
+	background-color: #cde136;/*color al fondo del boton*/
+	color: black;/*color al texto del boton*/
+
+}
+
+
+.seccion
+{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+
+.cuadrado-perfecto
+{
+	width: 100%;
+	padding-bottom: 100%;
+	position: relative;
+}
+.cuadrado-perfecto img
+{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;/*para cubrir el espacio del cuadrado con la imagen solo funciona con img*/
+	object-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.container
+{
+	width: 100%;
+	margin: 0 auto 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+	position: relative;
+}
+
+
+.container-fluid/*para correr las fotos de la galeria del borde izquierdo*/
+{
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	position: relative;
+}
+
+
+.row
+{
+	display: flex;
+	flex-wrap: wrap; /*si una de las columnas no entra o no cabe pues se va hacia abajo*/
+	margin-left: -15px;
+	margin-right: -15px;
+}
+
+.columna
+{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.columna-25
+{
+	width: 25%;
+}
+.columna-33
+{
+	width: 33.33%;
+}
+
+.columna-41
+{
+	width: 41.66%;
+}
+.columna-50
+{
+	width: 50%;
+}
+
+.empujar-50
+{
+	margin-left: 50%;
+}
+
+.empujar-66
+{
+	margin-left: 66.66%;
+}
+
+.empujar-58
+{
+	margin-left: 58.33%;
+}
+
+.empujar-0
+{
+	margin-left: 0;
+}
+
+#inicio
+{
+	position: relative;/*para poder mover el bloque pero el espacio queda igual (con absoluto no queda el espacio) con top, bottom, left, right, z-index*/
+}
+#inicio img 
+{
+	width: 100%;
+	display: block;
+}
+#inicio .bloque-inicio
+{
+	/*position: relative;/*para poder mover el bloque pero el espacio queda igual (con absoluto no queda el espacio) con top, bottom, left, right, z-index*/
+	position:absolute;/*pone encima de la imagen sin guardar espacio*/
+	top:40%;
+	left: 50%;
+	width: 400px;/*ancho*/
+	text-align: center;/*centramos los textos*/
+	margin-left: -200px;/*regreso la mitad de lo que vale el ancho del bloke(solo margin trabaja con negativos)*/
+
+}
+#inicio .bloque-inicio h1{
+	color: white;/*damos color a la fuente*/
+	font-size: 35px; /*damos tamaño a la fuente*/
+}
+#inicio .bloque-inicio p{
+	color: blueviolet;/*damos color a la fuente*/
+	font-size: 16px; /*damos tamaño a la fuente, (px no puede tener espacios con el numero del tamaño que se va a asignar)*/
+}
+#nosotros
+{
+	background-image: url(img/latas.jpg);
+	background-size: cover;
+	color:write;
+	text-align: center;
+
+}
+
+#nosotros p 
+{
+	color: white;
+	text-align: center;
+	font-size: 16px;
+	/*margin: 0;*/
+}
+#servicios .bloque-servicio
+{
+	border: 1px solid grey;
+}
+
+#servicios .bloque-servicio .bloque-img-servicio
+{
+
+}
+#servicios .bloque-servicio .bloque-img-servicio img
+{
+	width:100%;
+}
+
+#servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto/*convertimos el cuadrado perfecto en un rectangulo*/
+{
+	padding-bottom: 56.25%;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio
+{
+	padding: 15px; /*separa el texto del limite izquierdo del cuadro*/ 
+}
+#servicios .bloque-servicio .bloque-contenido-servicio h3
+{
+	margin-top: 0;
+	font-size: 25px;
+}
+
+#galeria
+{
+
+}
+#galeria h4
+{
+	padding-right: 15px;
+	padding-left: 15px;
+	text-align: center;
+	position: absolute;
+	top: 40%;
+	color: white;
+	font-size: 18px;
+	width: 100%;
+}
+
+#galeria img
+{
+	filter: grayscale(1);/*para poner las imagenes en blanco y negro*/
+}
+
+#galeria .cuadrado-perfecto:hover img /*para que la imagen cambie a color cuando ponga el mouse encima*/
+{
+	filter: grayscale(0);
+}
+
+#galeria .cuadrado-perfecto:hover h4 /*para que cuando ponga el mouse desaparesca la letra*/
+{
+	display: none;
+}
+
+#contactenos
+{
+	position: relative;
+}
+#contactenos iframe
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: grayscale(1);
+}
+
+#contactenos form
+{
+	padding: 60px;
+	background-color: red;
+}
+
+#contactenos form .form-block
+{
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+#contactenos form .form-block .form-control
+{
+	display: block;
+	height: 40px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+#contactenos form .form-block textarea
+{
+	display: block;
+	height: 100px;
+	font-size: 16px;
+	border: 1px solid grey;
+	width: 100%;
+	padding: 5px 10px;
+}
+
+#contactenos form .form-block.bloque-ultimo
+{
+	margin-bottom: 0;
+}
+
+/*para los celulares primero establecer tamaño maximo que es 767pixeles se hace el siguiente media query*/
+@media(max-width:767px)
+{
+	body
+	{
+		font-size: 15px;
+	}
+
+	header .container nav 
+	{
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		background-color: white;
+		padding-top: 80px;
+		padding-bottom: 80px;
+		padding-right: 15px;
+		padding-left: 15px;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-direction: column;
+		transition: all 0.4s ease;
+		transform: translateX(100%);
+
+	}
+	header .container nav.open
+	{
+		transform: translateX(0);
+	}
+	header .container nav a 
+	{
+		font-size: 30px;
+		margin: 15px 0;
+	}
+	header .container .hamb
+	{
+		display: block;
+		font-size: 40px;
+		color: red;
+
+	}
+	form .boton.boton-negro
+	{
+		width: 100%;
+	}
+	footer
+	{
+		text-align: center;
+	}
+
+	footer .logo-footer
+	{
+		width: 50%;
+	}
+
+	footer .redes
+	{
+		justify-content: center;
+	}
+
+	.container
+	{
+		width: 100%;
+	}
+	.columna-mobile-100
+	{
+		width: 100%;
+	}
+	.columna-mobile-50
+	{
+		width: 50%;
+	}
+	.empujar-mobile-0
+	{
+		margin-left: 0;
+	} 
+	.sinpadding-mobile
+	{
+		padding: 0;
+	}
+	#inicio
+	{
+		height: 100vh;
+	}
+	#inicio img
+	{
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	#servicios .bloque-servicio{
+		margin-bottom: 15px;
+	}
+	#contactenos{
+		padding: 0;
+	}
+
+	#contactenos iframe
+	{
+		position: relative;
+		height: 50vh;
+	}
+
+}
